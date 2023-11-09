@@ -1,5 +1,4 @@
 class Game {
-    // code to be added
     constructor(){
         this.startScreen = document.getElementById('game-intro');
         this.gameScreen = document.getElementById('game-screen');
