@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nebula-game</title>
-    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <main>
@@ -14,26 +16,24 @@
         <img src="./images/logo.png" alt="" class="logo-img" />
         <br />
         <h1>Introduction</h1>
-        <p> idbfierfneribgiudbfibwfbieboubeib<br>hbibfoubrofbro</p>
-        <ol type="1" class="instructions" > 
-          <li>
-           Use the arrow keys to control the spaceship!
-          </li>
-          <li>
-            Avoide flying comets
-          </li>
-          <li>
-            Save lost astronauts in space
-          </li>
+        <p>idbfierfneribgiudbfibwfbieboubeib<br />hbibfoubrofbro</p>
+        <ol type="1" class="instructions">
+          <li class="list-items">Use the arrow keys to control the spaceship!</li>
+          <li class="list-items">Avoide flying comets</li>
+          <li class="list-items">Save lost astronauts in space</li>
         </ol>
-          
-        
-        <img src="./images/keyboard arrows.png" alt="keyboard-arrows" class="arrows-img" />
+
+        <img
+          src="./images/keyboard arrows.png"
+          alt="keyboard-arrows"
+          class="arrows-img"
+        />
+        <br>
         <button id="take-off">Take Off!!!</button>
       </div>
 
       <div id="game-container">
-        <div>
+        <div hidden>
           <h2>Stats</h2>
           <p>Score: <span id="Lifes have been saved">0</span></p>
           <p>Lives: <span id="Remaining lives">3</span></p>
@@ -44,7 +44,7 @@
 
       <!-- #game-end is initially hidden using CSS style display: none -->
       <div id="game-end">
-       <img src="./images/logo.png" alt="" class="logo-img" />
+        <img src="./images/logo.png" alt="" class="logo-img" />
         <h1>Game Over</h1>
         <br />
         <button id="restart-button">begin over</button>
@@ -56,16 +56,3 @@
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
