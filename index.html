@@ -6,32 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nebula-game</title>
     <link rel="stylesheet" type="text/css" href="./Styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <!-- # game start screen -->
-      <div id="game-intro">
+      <!------------------------------ LANDING PAGE--------------------------->
+      <div class="landing-container">
         <img src="./images/logo.png" alt="" class="logo-img" />
-        <br />
-        <h1>Introduction</h1>
-        <p>idbfierfneribgiudbfibwfbieboubeib<br />hbibfoubrofbro</p>
-        <ol type="1" class="instructions">
-          <li class="list-items">Use the arrow keys to control the spaceship!</li>
-          <li class="list-items">Avoide flying comets</li>
-          <li class="list-items">Save lost astronauts in space</li>
-        </ol>
-
-        <img
-          src="./images/keyboard arrows.png"
-          alt="keyboard-arrows"
-          class="arrows-img"
-        />
-        <br>
-        <button id="take-off">Take Off!!!</button>
+        <h1 class="title">Introduction</h1>
+        <p class="text-white m-20">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit sapiente
+          doloribus magni amet nisi quam numquam, repellat soluta! Voluptatem
+          dolorum dignissimos veniam architecto, commodi quasi atque unde totam
+          culpa animi.
+        </p>
+        <div class="control-section">
+          <h2 class="text-white">Controls:</h2>
+          <ol class="list">
+            <li>1. Use the arrow keys to control the spaceship!</li>
+            <li>2. Avoid flying comets</li>
+            <li>3. Save lost astronauts in space</li>
+          </ol>
+        </div>
+        <div>
+          <img
+            src="./images/keyboard arrows.png"
+            alt="keyboard-arrows"
+            class="arrows-img"
+          />
+          <br />
+          <button class="take-off">TAKE OFF !</button>
+        </div>
       </div>
-
+      <!-------------------------GAME SCREEN-------------------------------------->
       <div id="game-container">
         <div hidden>
           <h2>Stats</h2>
