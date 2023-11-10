@@ -1,28 +1,22 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
+  padding: 0;
+  text-align: center;
+  background-image: url(../images/background-1.jpg);
+}
 
-    padding: 0;
-    text-align: center;
-    background-image: url(../images/background-1.jpg);
-  }
-
-  .logo-img {
-    height: 400px;
-    width: 500px;
-  }
+.logo-img {
+  height: 300px;
+  width: 300px;
+}
 
 div h1 {
    font-size: 55px; 
    color: rgb(156, 36, 156);
-   text-shadow: 3px 3px 26px black;
-    margin: 0;
-}
-
-.keyboard-keys {
- display: flex;
-}
-
-div .take-off {
-  display: flex;
+   text-shadow: 0 0 6px black;
 }
   
   #game-intro {
@@ -72,6 +66,10 @@ div .take-off {
   
   .logo-img {
     width: 350px;
+  }
+  
+  .arrows-img {
+    width: 150px;
   }
   
   body button {
