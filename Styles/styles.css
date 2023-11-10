@@ -13,7 +13,16 @@ body {
 div h1 {
    font-size: 55px; 
    color: rgb(156, 36, 156);
-   text-shadow: 0 0 6px black;
+   text-shadow: 3px 3px 26px black;
+    margin: 0;
+}
+
+.keyboard-keys {
+ display: flex;
+}
+
+div .take-off {
+  display: flex;
 }
   
   #game-intro {
@@ -63,10 +72,6 @@ div h1 {
   
   .logo-img {
     width: 350px;
-  }
-  
-  .arrows-img {
-    width: 150px;
   }
   
   body button {
