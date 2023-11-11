@@ -1,8 +1,10 @@
 class Game {
     constructor(){
-        this.startScreen = document.getElementById('game-intro');
-        this.gameScreen = document.getElementById('game-screen');
-        this.gameEndScreen = document.getElementById('game-end');
+        this.startScreen = document.querySelector('.landing-container');
+        // make in html a class
+        this.gameScreen = document.querySelector('.game-container');
+        this.gameEndScreen = document.querySelector('.game-end');
+        // screen size!!!!
         this.player = new Player(
             this.gameScreen,
             10,
@@ -20,19 +22,17 @@ class Game {
     }
 
     start(){
-        
         this.gameScreen.style.width = `${this.width}px`;
         this.gameScreen.style.height = `${this.height}px`;
         this.startScreen.style.display = 'none';
         this.gameScreen.style.display = 'block';
         this.gameLoop();
-        // Car start at a specific position
-        // comets are going to be at a specific position as well
+    // comets are going to be at a specific position as well
     }
 
     gameLoop(){
         // Right now, always this.gameIsOver === false
-        if(this.gameIsOver === true){
+        if(this.beginover === true){
             return;
         }
         console.log('gameLoop exec')
