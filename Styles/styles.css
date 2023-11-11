@@ -27,32 +27,80 @@ body {
   width: 350px;
 }
 
-div h1 {
+.title {
   font-size: 55px;
   color: rgb(201, 29, 201);
   text-shadow: 0 0 6px black;
   margin: 0;
 }
 
-#game-intro {
+.text-white {
+  color: white;
+}
+
+.m-20 {
+  /* margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20px; */
+  margin: 4%;
+  
+}
+
+.control-section li {
+  text-align: center;
+}
+
+
+.list {
+  color: white;
+  list-style: none;
+  text-align: left;
+  justify-content: center;
+}
+
+.arrows-img {
+  width: 150px;
+}
+
+.take-off {
+  padding: 12px 17px;
+  font-size: 20px;
+  margin: 0;
+}
+
+/*----------------------------------------------------------------------*/
+
+
+
+/* #game-intro {
   padding: 20px 0px;
-}
+  text-align: center;
+} */
 
-.instructions {
+/* .instructions {
   justify-content:space-between;  
-}
+} */
 
-.list-items {
-  padding: 5px;
-}
 
-#game-container {
+
+
+
+
+
+
+
+/* .list-items {
+  padding: 3px;
+  text-align: left !important;
+} */
+
+/* #game-container {
   display: flex;
   width: 100vw;
   padding: 20px 0px;
   justify-content: center;
-  /* visibility: hidden; */
-}
+  visibility: hidden;
+ } */
 
 #game-screen {
   display: none;
@@ -84,14 +132,6 @@ div h1 {
 .game-intro p {
   font-size: 18px;
   font-family: "Verdana";
-}
-
-.logo-img {
-  width: 350px;
-}
-
-.arrows-img {
-  width: 150px;
 }
 
 body button {
