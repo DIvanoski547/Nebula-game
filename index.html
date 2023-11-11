@@ -19,10 +19,10 @@
         <img src="./images/logo.png" alt="" class="logo-img" />
         <h1 class="title">Introduction</h1>
         <p class="text-white m-20">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Sit sapiente
-          doloribus magni amet nisi quam numquam,<br> repellat soluta! Voluptatem
-          dolorum dignissimos veniam <br>architecto,commodi  quasi atque unde totam
-          culpa animi.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
+          Sit sapiente doloribus magni amet nisi quam numquam,<br />
+          repellat soluta! Voluptatem dolorum dignissimos veniam
+          <br />architecto,commodi quasi atque unde totam culpa animi.
         </p>
         <div class="control-section">
           <h2 class="text-white">Controls:</h2>
@@ -43,14 +43,16 @@
         </div>
       </div>
       <!-------------------------GAME SCREEN-------------------------------------->
-      <div id="game-container">
-        <div hidden>
+      <div class="game-container">  
+        <div class="scores-container">
           <h2>Stats</h2>
-          <p>Score: <span id="Lifes have been saved">0</span></p>
-          <p>Lives: <span id="Remaining lives">3</span></p>
+          <ul class="score">
+            <li>Score: <span>0</span></li>
+            <li>Lives: <span>3</span></li>
+          </ul>
         </div>
-        <!-- #game-screen is initially hidden using CSS style display: none -->
-        <div id="game-screen"></div>
+       
+        <div class="game-screen"></div>  <!-- #game-screen is initially hidden using CSS style display: none -->
       </div>
 
       <!-- #game-end is initially hidden using CSS style display: none -->

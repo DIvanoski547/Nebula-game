@@ -1,30 +1,30 @@
 class Game {
     constructor(){
-        this.startScreen = document.querySelector('.landing-container');
+        this.startScreen = document.querySelector('.landing-container'); // START PAGE //
         // make in html a class
-        this.gameScreen = document.querySelector('.game-container');
-        this.gameEndScreen = document.querySelector('.game-end');
-        // screen size!!!!
-        this.player = new Player(
+        this.gameScreen = document.querySelector('.game-container'); // GAME SCREEN // 
+        this.gameEndScreen = document.querySelector('.game-end'); // END GAME SCREEN //
+        
+        this.player = new Player(  
             this.gameScreen,
             10,
             550,
             100,
             100,
             './images/spaceship-2.png'
-        ); //  new Player()
-        this.width = 1500;
-        this.height = 1500;
-        this.comets = []; // new comet()
+        ); // ADD NEW PLAYER()
+        this.width = 600;  // screen size!!!!
+        this.height = 600; // screen size!!!!
+        this.comets = []; // new obstacle()
         this.score = 0;
-        this.lives = 3;
+        this.lives = 5;
         this.gameIsOver = false;
     }
 
     start(){
         this.gameScreen.style.width = `${this.width}px`;
         this.gameScreen.style.height = `${this.height}px`;
-        this.startScreen.style.display = 'none';
+        this.startScreen.style.display = 'none'; // turning off start screen and show game screen
         this.gameScreen.style.display = 'block';
         this.gameLoop();
     // comets are going to be at a specific position as well
@@ -32,7 +32,7 @@ class Game {
 
     gameLoop(){
         // Right now, always this.gameIsOver === false
-        if(this.beginover === true){
+        if(this.gameIsOver === true){
             return;
         }
         console.log('gameLoop exec')
