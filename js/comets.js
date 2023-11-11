@@ -7,6 +7,9 @@ class Comets {
         this.height = 150;
 
         this.element = document.createElement("img")
-        this.element.src
+        this.element.src = "./images/obstacle-1.png";
+        this.element.style.width = `${this.width}`;
+        this.element.style.height = `${this.height}`;
+        
     }
 }
