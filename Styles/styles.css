@@ -14,6 +14,7 @@ body {
   background-repeat: no-repeat;
   background-position: cover;
   height: 100vh;
+  display: none;
   /* opacity: 0.5;
   z-index: -1;
   -webkit-background-size: cover;
@@ -69,82 +70,65 @@ body {
 }
 
 /*----------------------------------------------------------------------*/
-
-
-
-/* #game-intro {
-  padding: 20px 0px;
-  text-align: center;
-} */
-
-/* .instructions {
-  justify-content:space-between;  
-} */
-
-
-
-
-
-
-
-
-
-/* .list-items {
-  padding: 3px;
-  text-align: left !important;
-} */
-
-/* #game-container {
-  display: flex;
-  width: 100vw;
-  padding: 20px 0px;
-  justify-content: center;
-  visibility: hidden;
- } */
-
-#game-screen {
-  display: none;
-  align-content: center;
-  padding: 20px 0px;
-  overflow: hidden;
-  position: relative;
-  background-image: url(../images/road.png);
-  background-size: cover;
-  animation: slide 5s linear infinite;
-}
-
-@keyframes slide {
-  0% {
-    background-position: 0 -1000px;
-  }
-  95% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 50px;
-  }
-}
-
-#game-end {
+.game-container{
   display: none;
 }
 
-.game-intro p {
-  font-size: 18px;
-  font-family: "Verdana";
-}
 
-body button {
-  font-size: 30px;
-  background-color: rgb(201, 29, 201);
-  color: #fff;
-  padding: 20px 40px;
-  border: 0;
-  box-shadow: 0;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
 
-button:hover {
-  cursor: pointer;
-}
+
+
+
+
+
+
+
+
+/* <!------------------------------ GAME END SCREEN---------------------------> */
+.Game-End {
+    background-image: url(../images/background-1.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    height: 100vh;
+    /* opacity: 0.5;
+    z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+  }
+
+  
+    
+.Game-Over{
+      font-size: 55px;
+     color: rgb(201, 29, 201);
+      text-shadow: 0 0 6px black;
+      margin: 0;
+    }
+
+    .restart-button{
+      padding: 12px 17px;
+      font-size: 20px;
+      margin: 0;
+    }
+
+
+
+    body button {
+      font-size: 30px;
+      background-color: rgb(201, 29, 201);
+      color: #fff;
+      padding: 20px 40px;
+      border: 0;
+      box-shadow: 0;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .Lifes-Have-Been-Saved {
+     display: column-reverse;
+
+    }
+
+    
