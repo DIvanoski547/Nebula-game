@@ -66,13 +66,35 @@ body {
 /* ------------------------------- GAME SCREEN -------------------------------------------------------*/
 
 .game-screen {
-  display: block;
+  display: flex;
   align-content: center;
   overflow: hidden;
   position: relative;
-  background-image: url(/images/background-2.jpg);
-  background-size: 100% 100%;
-  animation: 20s linear infinite;
+  background-image: url(../images/background-1.jpg);
+  animation: slide 30s linear infinite;
+  background-repeat: repeat;
+  background-position: cover;
+  height: 100vh; 
+  color: white; 
+}
+
+.score-container{
+  flex-basis: 40%;
+}
+
+.game-container-2{
+  flex-basis: 60%;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: stretch;
+    padding: 2%;
+    list-style: none;
 }
 
 @keyframes slide {
