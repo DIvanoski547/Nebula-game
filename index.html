@@ -43,31 +43,30 @@
         </div>
       </div>
       <!-------------------------GAME SCREEN-------------------------------------->
-      <div class="game-container">
-        
-          <div class="game-screen">
-            <div class="scores-container">
-              <h2 class="score">Stats</h2>
-                <ul class="score">
-                  <li>Score: <span>0</span></li>
-                  <li>Lives: <span>3</span></li>
-                </ul>
-                  <!-- <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis quibusdam laboriosam doloremque rerum praesentium dolor, nihil earum corrupti ex excepturi accusamus, molestiae eaque natus a nostrum aliquid inventore dicta reiciendis. </div>
-              </div> -->
-          </div>
-      </div>
-
-
+      <div class="game-container">  
+        <div class="scores-container">
+          <h2>Stats</h2>
+          <ul class="score">
+            <li>Score: <span>0</span></li>
+            <li>Lives: <span>3</span></li>
+          </ul>
         </div>
+       
+        <div class="game-screen"></div>  <!-- #game-screen is initially hidden using CSS style display: none -->
       </div>
 
-      <!-- #game-end is initially hidden using CSS style display: none -->
-      <div id="game-end">
-        <img src="./images/logo.png" alt="" class="logo-img" />
-        <h1>Game Over</h1>
-        <br />
-        <button id="restart-button">begin over</button>
-      </div>
+        <!-------------------------GAME END SCREEN-------------------------------------->
+        <div class="Game-End">
+          <img src="./images/logo.png" alt="" class="logo-img" />
+          <h1 div class="Game-Over">Game Over! You Are Lost In Space.</h1>
+          </div>
+          <div class="Stats">
+          <p>Score: <span class="Lifes-Have-Been-Saved">0</span></p>
+          <div>
+           <br>
+            <button class="restart-button">TAKE OFF!</button>
+          </div>
+        </div>
     </main>
   </body>
   <script src="js/spaceship.js"></script>
