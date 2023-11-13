@@ -4,75 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Nebula-game</title>
-    <link rel="stylesheet" type="text/css" href="./Styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Island Racer</title>
   </head>
   <body>
     <main>
-      <!------------------------------ LANDING PAGE--------------------------->
-      <div class="landing-container">
-        <img src="./images/logo.png" alt="" class="logo-img" />
-        <h1 class="title">Introduction</h1>
-        <p class="text-white m-20">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
-          Sit sapiente doloribus magni amet nisi quam numquam,<br />
-          repellat soluta! Voluptatem dolorum dignissimos veniam
-          <br />architecto,commodi quasi atque unde totam culpa animi.
-        </p>
-        <div class="control-section">
-          <h2 class="text-white">Controls:</h2>
-          <ol class="list">
-            <li>1. Use the arrow keys to control the spaceship!</li>
-            <li>2. Avoid flying comets</li>
-            <li>3. Save lost astronauts in space</li>
-          </ol>
-        </div>
-        <div>
-          <img
-            src="./images/keyboard arrows.png"
-            alt="keyboard-arrows"
-            class="arrows-img"
-          />
-          <br />
-          <button class="take-off">TAKE OFF !</button>
-        </div>
+      <!--------------------------- LANDING CONTAINER ------------------------------>
+      <div id="game-intro">
+        <img src="./images/logo.png" alt="logo" class="logo-img" />
+        <h2>Introduction</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus totam ex eaque itaque vitae dolore similique reprehenderit natus magni fugiat cumque, unde error! Odio nostrum voluptatibus qui quidem quisquam?</p>
+        <p>Use the left and right arrow to control the car!</p>
+        <img src="./images/keyboard arrows.png" alt="keyboard-arrows" class="arrows-img" />
+        <br />
+        <button id="start-button">Take off!</button>
       </div>
-      <!-------------------------GAME SCREEN-------------------------------------->
-      <div class="game-container">
-        <div class="scores-container">
-          <h2>Stats</h2>
-          <ul class="score">
-            <li>Score: <span>0</span></li>
-            <li>Lives: <span>3</span></li>
-          </ul>
-        </div>
-
-        <div class="game-screen"></div>
-        <!-- #game-screen is initially hidden using CSS style display: none -->
-      </div>
-
-      <!-------------------------GAME END SCREEN-------------------------------------->
-      <div class="game-end">
-        <div>
-          <img src="./images/logo.png" alt="" class="logo-img" />
-          <h1 class="game-over">Game Over! You Are Lost In Space.</h1>
-        </div>
-        <div class="stats">
-          <p>Score: <span class="Lifes-Have-Been-Saved">0</span></p>
+      <!------------------------------ GAME SCREEN -----------------------------------> 
+      <div id="game-container">
+        
+        <div id="game-screen">
           <div>
-            <br />
-            <button class="restart-button">TAKE OFF!</button>
+            <h2>Stats</h2>
+            <p>Score: <span id="score">0</span></p>
+            <p>Lives: <span id="lives">3</span></p>
           </div>
         </div>
       </div>
+      <!------------------------------ GAME END SCREEN -------------------------------->
+      <div id="game-end">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <h1>Game Over</h1>
+        <br />
+        <button id="restart-button">Restart</button>
+      </div>
     </main>
+    <script src="js/player.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
-  <script src="js/spaceship.js"></script>
-  <script src="js/comets.js"></script>
-  <script src="js/main-game.js"></script>
 </html>
