@@ -49,7 +49,7 @@ class Game {
     window.requestAnimationFrame(() => this.gameLoop()); // used to improve/better manage the rate of frames for the game animation
   }
 
-  update() { 
+  update() {
     // Return the new position of the spaceship to update the game
     this.player.move();
     // Return the new positions of the commets to update the game
@@ -77,21 +77,32 @@ class Game {
         i--;
       }
     }
-    // -----------------------------------------ASTRONAUT---------------------------------------------------------------------------//
-    //Return the new positions of the astronaut to update the game
+    //--------------------------------------------------------------Astronaut----------------------------------------------------------------------//
     for (let i = 0; i < this.astronauts.length; i++) {
       const astronaut = this.astronauts[i];
       astronaut.move();
 
-      if (this.player.didCollide(astronauts)) {
+      // If the player's collides with an astronaut
+      if (this.player.didCollide(astronaut)) {
         // Remove the obstacle element from the DOM
-        astronauts.element.remove();
-        // Increase the score by 1
-        this.score++;
-        document.getElementById("score").textContent = this.score;
+        astronaut.element.remove();
+        // Remove obstacle object from the array
+        this.astronauts.splice(i, 1);
+        // increase player's lives by 1
+        this.lives++;
+        document.getElementById("lives").textContent = this.lives;
+        // Update the counter variable to account for the removed astronaut
         i++;
+      } else if (astronaut.top > this.height) {
+        // Remove the astronaut. from the DOM
+        astronaut.element.remove();
+        // Remove astronaut. object from the array
+        this.astronaut.splice(i, 1);
+        // Update the counter variable to account for the removed obstacle
+        i--;
       }
     }
+    //Return the new positions of the astronaut to update the game
 
     // End the game
     if (this.lives === 0) {
@@ -102,12 +113,20 @@ class Game {
     if (Math.random() > 0.98 && this.obstacles.length < 1) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
+    // Create a new astronaut based on a random probability
+    // when there is no other astronaut on the screen
+   // if (Math.random() > 0.98 && this.obstacles.length > 0) {
+    //this.astronauts.push(new Astronaut(this.gameScreen));
+    //}
   }
+
 
   // Create a new method responsible for ending the game
   endGame() {
-    this.player.element.remove(); // remove the player car from the screen
+    this.player.element.remove(); // remove the player from the screen
     this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
+
+    this.astronauts.forEach((astronaut) => astronaut.element.remove()); // remove the astronaut from the screen
 
     this.gameIsOver = true; // cancel the execution of gameLoop()
     this.startScreen.style.display = "none";
