@@ -21,7 +21,7 @@ class Player {
     }
 
     move(){
-        // Update player's car position based on directionX and directionY
+        // Update player's spaceship position based on directionX and directionY
     this.left += this.directionX;
     this.top += this.directionY;
 
