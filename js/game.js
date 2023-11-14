@@ -1,7 +1,7 @@
 class Game {
     // code to be added
     constructor(){
-        this.startScreen = document.getElementById('game-intro');
+        this.startScreen = document.getElementById('start-page');
         this.gameScreen = document.getElementById('game-screen');
         this.gameEndScreen = document.getElementById('game-end');
         // this.gamecontainer = document.getElementById('game-container');
@@ -17,7 +17,7 @@ class Game {
             './images/spaceship-2.png'
         ); //  new Player()
 
-        this.width = 600;
+        this.width = 1000;
         this.height = 800;
 
         this.obstacles = []; // new Obstacle()

@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./Styles/styles.css" />
-    <title>Island Racer</title>
+    <title>Nebula game</title>
   </head>
   <body>
     <main>
       <!--------------------------- LANDING CONTAINER ------------------------------>
-      <div id="game-intro">
+      <div id="start-page">
         <img src="./images/logo.png" alt="logo" class="logo-img" />
         <h2>Introduction</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae delectus totam ex eaque itaque vitae dolore similique reprehenderit natus magni fugiat cumque, unde error! Odio nostrum voluptatibus qui quidem quisquam?</p>
         <p>Use the left and right arrow to control the car!</p>
         <img src="./images/keyboard arrows.png" alt="keyboard-arrows" class="arrows-img" />
         <br />
-        <button id="start-button">Take off!</button>
+        <button id="start-button">TAKE OFF!</button>
       </div>
       <!------------------------------ GAME SCREEN -----------------------------------> 
-      <div id="game-container">
+      <!-- <div id="game-container"> -->
         <div id="game-screen">
           <div>
             <h2>Stats</h2>
@@ -28,12 +28,14 @@
             <p>Lives: <span id="lives">3</span></p>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
       <!------------------------------ GAME END SCREEN -------------------------------->
       <div id="game-end">
         <img src="./images/logo.png" alt="" class="logo-img" />
-        <h1>Game Over</h1>
+        <h1>You are lost in space</h1>
         <br />
+        <img src="./images/astronaut-3.png" alt="lost-astronaut" class="lost-astronaut">
+        <br>
         <button id="restart-button">Restart</button>
       </div>
     </main>
