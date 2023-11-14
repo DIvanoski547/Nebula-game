@@ -115,9 +115,9 @@ class Game {
     }
     // Create a new astronaut based on a random probability
     // when there is no other astronaut on the screen
-   // if (Math.random() > 0.98 && this.obstacles.length > 0) {
-    //this.astronauts.push(new Astronaut(this.gameScreen));
-    //}
+    if (Math.random() > 0.98 && this.astronauts.length < 1) {
+    this.astronauts.push(new Astronaut(this.gameScreen));
+    }
   }
 
 
