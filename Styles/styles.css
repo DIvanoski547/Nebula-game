@@ -1,12 +1,10 @@
-body {
+body{
   padding: 0;
   margin: 0;
   text-align: center;
 }
 /*--------------------------- LANDING CONTAINER ----------------------- */
-#start-page {
-  /* display: none; --------------------------- */
-  /* padding: 20px 0px; */
+#start-page{
   background-image: url(../images/background-2.jpg);
   height: 100vh;
   background-repeat: no-repeat;
@@ -15,29 +13,25 @@ body {
   background-size: cover;
 }
 
-#start-button {
+#start-button{
   margin-top: 10px;
   
 }
 
-.font-10 {
+.font-10{
   font-size: x-large;
 }
 
-.b-10 {
+.b-10{
   font-weight: bold;
 }
 
 /*---------------------------- GAME CONTAINER --------------------------- */ 
 #game-container { 
-  /* display: none; */
   display: flex;
   padding: 20px 0px;
   justify-content: center;
   background-color: black;
-  /* height: 100%;
-  width: 100%; */
-  
 }
 
 #game-screen {
@@ -66,11 +60,11 @@ body {
   }
 }
 
-.music {
+/* .music{
   visibility: hidden;
-}
+} */
 /*--------------------------- GAME END LOSS SCREEN ---------------------- */
-#game-end {
+#game-end{
   display: none;
   background-image: url(../images/background-2.jpg);
   height: 100vh;
@@ -79,7 +73,7 @@ body {
   color: #fff;
 }
 
- .lost-astronaut {
+ .lost-astronaut{
   height: 180px;
   width: 180px; 
 }
@@ -89,7 +83,7 @@ body {
 }
 /* ------------------------------ GAME END WON SCREEN ----------------------*/ 
 
-#game-Endwon {
+#game-Endwon{
   display: none;
   background-image: url(../images/background-2.jpg);
   height: 100vh;
@@ -98,7 +92,7 @@ body {
   color: #fff;
 }
 
- .saved-astronaut {
+ .saved-astronaut{
   height: 180px;
   width: 180px; 
 }
@@ -106,30 +100,26 @@ body {
 .congratulations{
   font-size: 3em;
 }
+
 /*---------------------------------------------------------------------------*/
 
 
-
-
-
-
-
-.game-intro p {
+.game-intro p{
   font-size: 18px;
   font-family: "Verdana";
 }
 
-.logo-img {
+.logo-img{
   width: 300px;
   height: 300px;
 }
 
-.arrows-img {
+.arrows-img{
 height: 200px;
 width: 200px;
 }
 
-body button {
+body button{
   font-size: 20px;
   background-color: rgb(153, 6, 153);
   color: #fff;
@@ -140,6 +130,6 @@ body button {
   margin-bottom: 20px;
 }
 
-button:hover {
+button:hover{
   cursor: pointer;
 }
