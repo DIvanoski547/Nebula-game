@@ -5,6 +5,7 @@ body {
 }
 /*--------------------------- LANDING CONTAINER ----------------------- */
 #start-page {
+  /* display: none; --------------------------- */
   /* padding: 20px 0px; */
   background-image: url(../images/background-2.jpg);
   height: 100vh;
@@ -33,9 +34,9 @@ body {
   display: flex;
   padding: 20px 0px;
   justify-content: center;
-  /*background-image: url(../images/background-2.jpg);*/
-  /*background-repeat: no-repeat;*/
-  color: #fff;
+  background-color: black;
+  /* height: 100%;
+  width: 100%; */
   
 }
 
@@ -68,7 +69,7 @@ body {
 .music {
   visibility: hidden;
 }
-/*--------------------------- GAME END SCREEN ---------------------- */
+/*--------------------------- GAME END LOSS SCREEN ---------------------- */
 #game-end {
   display: none;
   background-image: url(../images/background-2.jpg);
@@ -77,6 +78,41 @@ body {
   background-size: cover;
   color: #fff;
 }
+
+ .lost-astronaut {
+  height: 180px;
+  width: 180px; 
+}
+
+.lost-in-space{
+  font-size: 3em;
+}
+/* ------------------------------ GAME END WON SCREEN ----------------------*/ 
+
+#game-Endwon {
+  display: none;
+  background-image: url(../images/background-2.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+ .saved-astronaut {
+  height: 180px;
+  width: 180px; 
+}
+
+.congratulations{
+  font-size: 3em;
+}
+/*---------------------------------------------------------------------------*/
+
+
+
+
+
+
 
 .game-intro p {
   font-size: 18px;
@@ -106,9 +142,4 @@ body button {
 
 button:hover {
   cursor: pointer;
-}
-
-.lost-astronaut {
-  height: 35%;
-  width: 25%;
 }

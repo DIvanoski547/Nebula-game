@@ -4,6 +4,7 @@ class Game {
     this.startScreen = document.getElementById("start-page");
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
+    this.gameEndScreenWon = document.getElementById("game-Endwon");
     // this.gamecontainer = document.getElementById('game-container');
     // this.gameScreen.style.display = 'none';
     // this.gameEndScreen.style.display = 'none';
@@ -33,6 +34,7 @@ class Game {
     this.startScreen.style.display = "none";
     this.gameScreen.style.display = "block";
     this.gameEndScreen.style.display = "none";
+    this.gameEndScreenWon.style.display = "none";
     this.gameLoop();
     // Car start at a specific position
     // Obstacles are going to be at a specific position as well
@@ -89,24 +91,27 @@ class Game {
         // Remove obstacle object from the array
         this.astronauts.splice(i, 1);
         // increase player's lives by 1
-        this.lives++;
-        document.getElementById("lives").textContent = this.lives;
+        this.score++;
+        document.getElementById("score").textContent = this.score;
         // Update the counter variable to account for the removed astronaut
         i++;
       } else if (astronaut.top > this.height) {
         // Remove the astronaut. from the DOM
         astronaut.element.remove();
         // Remove astronaut. object from the array
-        this.astronaut.splice(i, 1);
+        this.astronauts.splice(i, 1);
         // Update the counter variable to account for the removed obstacle
         i--;
       }
     }
+
     //Return the new positions of the astronaut to update the game
 
     // End the game
     if (this.lives === 0) {
       this.endGame();
+    } else if (this.lives === 5) {
+      this.endGameWon();
     }
     // Create a new obstacle based on a random probability
     // when there is no other obstacles on the screen
@@ -121,11 +126,10 @@ class Game {
   }
 
 
-  // Create a new method responsible for ending the game
+  // Create a new method responsible for losing the game
   endGame() {
     this.player.element.remove(); // remove the player from the screen
     this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
-
     this.astronauts.forEach((astronaut) => astronaut.element.remove()); // remove the astronaut from the screen
 
     this.gameIsOver = true; // cancel the execution of gameLoop()
@@ -134,5 +138,16 @@ class Game {
     this.gameScreen.style.display = "none";
     // Show end game screen
     this.gameEndScreen.style.display = "block";
+  }
+  // Creat method for Winning the game
+  endGameWon() {
+    this.player.element.remove(); // remove the player from the screen
+    this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
+    this.astronauts.forEach((astronaut) => astronaut.element.remove()); // remove the astronaut from the screen
+    this.gameIsOver = true; // cancel the execution of gameLoop()
+    this.startScreen.style.display = "none"; // Hide game screen
+    this.gameScreen.style.display = "none"; // hide end game screen
+    this.gameEndScreen.style.display = "none"; // hide
+    this.gameEndScreenWon.style.display = "block"; // show
   }
 }
