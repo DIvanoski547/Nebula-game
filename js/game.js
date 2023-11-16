@@ -4,6 +4,8 @@ class Game {
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
     this.gameEndScreenWon = document.getElementById("game-endwon");
+    this.gamemusic = new Audio('../Music/song.mp3')
+    this.gamemusic.volume = 0.1;
     this.player = new Player(
       this.gameScreen,
       10,
@@ -19,6 +21,8 @@ class Game {
     this.score = 0;
     this.lives = 3;
     this.gameIsOver = false;
+    
+
   }
 
   //-------------------------------- START THE GAME ---------------------------- //
@@ -30,6 +34,7 @@ class Game {
     this.gameScreen.style.display = "block";
     this.gameEndScreen.style.display = "none";
     this.gameEndScreenWon.style.display = "none";
+    this.gamemusic.play();
     this.gameLoop();
   }
 
@@ -111,6 +116,7 @@ class Game {
     this.startScreen.style.display = "none";
     this.gameScreen.style.display = "none";
     this.gameEndScreen.style.display = "block";
+    this.gamemusic.pause();
   }
   // Creat method for Winning the game
   endGameWon() {
@@ -122,5 +128,6 @@ class Game {
     this.gameScreen.style.display = "none";
     this.gameEndScreen.style.display = "none";
     this.gameEndScreenWon.style.display = "block";
+    this.gamemusic.pause();
   }
 }

@@ -2,6 +2,7 @@ window.onload = function () {
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
     const gameWinButton = document.getElementById("win-button");
+    const gamesong = document.getElementById('song')
     let game;
   
     function startGame() {
@@ -14,6 +15,10 @@ window.onload = function () {
       location.reload();
     }
   
+    function playmusic() {
+      
+    }
+
     function handleKeydown(event) {
       const key = event.key;
       const possibleKeystrokes = [
