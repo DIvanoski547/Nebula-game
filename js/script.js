@@ -1,11 +1,11 @@
 window.onload = function () {
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
+    const gameWinButton = document.getElementById("win-button");
     let game;
   
-  
     function startGame() {
-      console.log("start game");
+      // console.log("start game");
       game = new Game();
       game.start();
     }
@@ -22,7 +22,7 @@ window.onload = function () {
         "ArrowRight",
         "ArrowDown",
       ];
-  
+    
       // Check if the pressed key is in the possibleKeystrokes array
       if (possibleKeystrokes.includes(key)) {
         event.preventDefault();
@@ -30,16 +30,16 @@ window.onload = function () {
         // Update player's directionX and directionY based on the key pressed
         switch (key) {
           case "ArrowLeft":
-            game.player.directionX = -1;
+            game.player.directionX = -3;
             break;
           case "ArrowUp":
-            game.player.directionY = -1;
+            game.player.directionY = -2;
             break;
           case "ArrowRight":
-            game.player.directionX = 1;
+            game.player.directionX = 3;
             break;
           case "ArrowDown":
-            game.player.directionY = 1;
+            game.player.directionY = 2;
             break;
         }
       }
@@ -53,6 +53,10 @@ window.onload = function () {
       restartGame();
     });
   
+    gameWinButton.addEventListener('click', function () {
+      restartGame();
+    })
+
      // Add the handleKeydown function as an event listener for the keydown event
      window.addEventListener("keydown", handleKeydown);
   };

@@ -3,7 +3,7 @@ class Game {
     this.startScreen = document.getElementById("start-page");
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
-    this.gameEndScreenWon = document.getElementById("game-Endwon");
+    this.gameEndScreenWon = document.getElementById("game-endwon");
     this.player = new Player(
       this.gameScreen,
       10,
@@ -33,7 +33,7 @@ class Game {
     this.gameLoop();
   }
 
-  //------------------------------ GAME LOOP ------------------------------------// 
+  //------------------------------ GAME LOOP ------------------------------------//
 
   gameLoop() {
     if (this.gameIsOver === true) {
@@ -44,10 +44,11 @@ class Game {
     window.requestAnimationFrame(() => this.gameLoop());
   }
 
-  //-------------------------------- GAME UPDATE (obstacle) ------------------------------ // 
+  //-------------------------------- GAME UPDATE (obstacle) ------------------------------ //
 
   update() {
     this.player.move();
+
     for (let i = 0; i < this.obstacles.length; i++) {
       const obstacle = this.obstacles[i];
       obstacle.move();
@@ -81,16 +82,17 @@ class Game {
       }
     }
 
-    //---------------------------- End the game ----------------------------------// 
+    //---------------------------- END THE GAME ----------------------------------//
 
-    if (this.lives === 0) {
-      this.endGame();
-    } else if (this.lives === 5) {
+    if (this.score === 5) {
       this.endGameWon();
+    } else if (this.lives === 0) {
+      this.endGame();
     }
+
     // Create a new obstacle based on a random probability
     // when there is no other obstacles on the screen
-    if (Math.random() > 0.98 && this.obstacles.length < 1) {
+    if (Math.random() > 0.98 && this.obstacles.length < 3) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
     // Create a new astronaut based on a random probability
@@ -100,28 +102,25 @@ class Game {
     }
   }
 
-  // Create a new method responsible for losing the game
+  // Create a new method for losing the game
   endGame() {
-    this.player.element.remove(); // remove the player from the screen
-    this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
-    this.astronauts.forEach((astronaut) => astronaut.element.remove()); // remove the astronaut from the screen
-
-    this.gameIsOver = true; // cancel the execution of gameLoop()
+    this.player.element.remove();
+    this.obstacles.forEach((obstacle) => obstacle.element.remove());
+    this.astronauts.forEach((astronaut) => astronaut.element.remove());
+    this.gameIsOver = true;
     this.startScreen.style.display = "none";
-    // Hide game screen
     this.gameScreen.style.display = "none";
-    // Show end game screen
     this.gameEndScreen.style.display = "block";
   }
   // Creat method for Winning the game
   endGameWon() {
-    this.player.element.remove(); // remove the player from the screen
-    this.obstacles.forEach((obstacle) => obstacle.element.remove()); // remove the obstacles from the screen
-    this.astronauts.forEach((astronaut) => astronaut.element.remove()); // remove the astronaut from the screen
-    this.gameIsOver = true; // cancel the execution of gameLoop()
-    this.startScreen.style.display = "none"; // Hide game screen
-    this.gameScreen.style.display = "none"; // hide end game screen
-    this.gameEndScreen.style.display = "none"; // hide
-    this.gameEndScreenWon.style.display = "block"; // show
+    this.player.element.remove();
+    this.obstacles.forEach((obstacle) => obstacle.element.remove());
+    this.astronauts.forEach((astronaut) => astronaut.element.remove());
+    this.gameIsOver = true;
+    this.startScreen.style.display = "none";
+    this.gameScreen.style.display = "none";
+    this.gameEndScreen.style.display = "none";
+    this.gameEndScreenWon.style.display = "block";
   }
 }

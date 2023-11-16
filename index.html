@@ -10,17 +10,16 @@
   <body>
     <main>
       <!--------------------------- LANDING CONTAINER ------------------------------>
-     
+      <audio>
+        <embed
+          src="./Music/Bonnie Tyler - I Need a Hero (Lyrics)  HQ 2011 Edition.mp3"
+          name="I need a Hero"
+          loop="true"
+          hidden="true"
+          autostart="true"
+        />
+      </audio>
       <div id="start-page">
-        <audio>
-          <embed
-            src="./Music/Bonnie Tyler - I Need a Hero (Lyrics)  HQ 2011 Edition.mp3"
-            name="I need a Hero"
-            loop="true"
-            hidden="true"
-            autostart="true"
-          />
-        </audio>
         <img src="./images/logo.png" alt="logo" class="logo-img" />
         <h1>Introduction:</h1>
         <p class="font-10">
@@ -69,10 +68,11 @@
         <button id="restart-button">Begin Over</button>
       </div>
 
-      <!-- <---------------------------- GAME END WON SCREEN -------------------------------->
+      <!-- <---------------------------- GAME END WIN SCREEN -------------------------------->
 
-      <div id="game-Endwon">
+      <div id="game-endwon">
         <img src="./images/logo.png" alt="" class="logo-img" />
+        <br>
         <img
           src="./images/astronaut-2.png"
           alt="saved-astronaut"
@@ -80,7 +80,7 @@
         />
         <p class="congratulations">Congratulations you saved your team!</p>
         <br />
-        <button id="restart-button">Begin Over</button>
+        <button id="win-button">Begin Over</button>
       </div>
       <!------------------------------------------------------------------------------------->
     </main>

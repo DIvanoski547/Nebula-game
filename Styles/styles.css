@@ -82,7 +82,7 @@ body{
 }
 /* ------------------------------ GAME END WON SCREEN ----------------------*/ 
 
-#game-Endwon{
+#game-endwon{
   display: none;
   background-image: url(../images/background-2.jpg);
   height: 100vh;
@@ -130,5 +130,5 @@ body button{
 }
 
 button:hover{
-  cursor: pointer;
+  cursor: grab;
 }
