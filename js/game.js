@@ -42,7 +42,6 @@ class Game {
     if (this.gameIsOver === true) {
       return;
     }
-    // console.log("gameLoop exec");
     this.update();
     window.requestAnimationFrame(() => this.gameLoop());
   }

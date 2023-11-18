@@ -5,7 +5,6 @@ window.onload = function () {
   let game;
 
   function startGame() {
-    // console.log("start game");
     game = new Game();
     game.start();
   }
