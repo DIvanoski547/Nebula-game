@@ -1,68 +1,59 @@
 window.onload = function () {
-    const startButton = document.getElementById("start-button");
-    const restartButton = document.getElementById("restart-button");
-    const gameWinButton = document.getElementById("win-button");
-    const gamesong = document.getElementById('song')
-    let game;
-  
-    function startGame() {
-      // console.log("start game");
-      game = new Game();
-      game.start();
-    }
-  
-    function restartGame() {
-      location.reload();
-    }
-  
-    function playmusic() {
-      
-    }
+  const startButton = document.getElementById("start-button");
+  const restartButton = document.getElementById("restart-button");
+  const gameWinButton = document.getElementById("win-button");
+  let game;
 
-    function handleKeydown(event) {
-      const key = event.key;
-      const possibleKeystrokes = [
-        "ArrowLeft",
-        "ArrowUp",
-        "ArrowRight",
-        "ArrowDown",
-      ];
-    
-      // Check if the pressed key is in the possibleKeystrokes array
-      if (possibleKeystrokes.includes(key)) {
-        event.preventDefault();
-  
-        // Update player's directionX and directionY based on the key pressed
-        switch (key) {
-          case "ArrowLeft":
-            game.player.directionX = -3;
-            break;
-          case "ArrowUp":
-            game.player.directionY = -2;
-            break;
-          case "ArrowRight":
-            game.player.directionX = 3;
-            break;
-          case "ArrowDown":
-            game.player.directionY = 2;
-            break;
-        }
+  function startGame() {
+    // console.log("start game");
+    game = new Game();
+    game.start();
+  }
+
+  function restartGame() {
+    location.reload();
+  }
+
+  function handleKeydown(event) {
+    const key = event.key;
+    const possibleKeystrokes = [
+      "ArrowLeft",
+      "ArrowUp",
+      "ArrowRight",
+      "ArrowDown",
+    ];
+
+    if (possibleKeystrokes.includes(key)) {
+      event.preventDefault();
+
+      switch (key) {
+        case "ArrowLeft":
+          game.player.directionX = -3;
+          break;
+        case "ArrowUp":
+          game.player.directionY = -2;
+          break;
+        case "ArrowRight":
+          game.player.directionX = 3;
+          break;
+        case "ArrowDown":
+          game.player.directionY = 2;
+          break;
       }
     }
-  
-    startButton.addEventListener("click", function () {
-      startGame();
-    });
-  
-    restartButton.addEventListener("click", function () {
-      restartGame();
-    });
-  
-    gameWinButton.addEventListener('click', function () {
-      restartGame();
-    })
+  }
 
-     // Add the handleKeydown function as an event listener for the keydown event
-     window.addEventListener("keydown", handleKeydown);
-  };
-  
+  startButton.addEventListener("click", function () {
+    startGame();
+  });
+
+  restartButton.addEventListener("click", function () {
+    restartGame();
+  });
+
+  gameWinButton.addEventListener("click", function () {
+    restartGame();
+  });
+
+  window.addEventListener("keydown", handleKeydown);
+};

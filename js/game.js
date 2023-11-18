@@ -4,7 +4,7 @@ class Game {
     this.gameScreen = document.getElementById("game-screen");
     this.gameEndScreen = document.getElementById("game-end");
     this.gameEndScreenWon = document.getElementById("game-endwon");
-    this.gamemusic = new Audio('../Music/song.mp3')
+    this.gamemusic = new Audio("../Music/song.mp3");
     this.gamemusic.volume = 0.1;
     this.player = new Player(
       this.gameScreen,
@@ -16,13 +16,11 @@ class Game {
     );
     this.width = 1000;
     this.height = 800;
-    this.obstacles = []; // new Obstacle()
-    this.astronauts = []; // new astronauts()
+    this.obstacles = [];
+    this.astronauts = [];
     this.score = 0;
     this.lives = 3;
     this.gameIsOver = false;
-    
-
   }
 
   //-------------------------------- START THE GAME ---------------------------- //
@@ -44,7 +42,7 @@ class Game {
     if (this.gameIsOver === true) {
       return;
     }
-    console.log("gameLoop exec");
+    // console.log("gameLoop exec");
     this.update();
     window.requestAnimationFrame(() => this.gameLoop());
   }
@@ -95,19 +93,15 @@ class Game {
       this.endGame();
     }
 
-    // Create a new obstacle based on a random probability
-    // when there is no other obstacles on the screen
     if (Math.random() > 0.98 && this.obstacles.length < 3) {
       this.obstacles.push(new Obstacle(this.gameScreen));
     }
-    // Create a new astronaut based on a random probability
-    // when there is no other astronaut on the screen
+
     if (Math.random() > 0.98 && this.astronauts.length < 1) {
       this.astronauts.push(new Astronaut(this.gameScreen));
     }
   }
 
-  // Create a new method for losing the game
   endGame() {
     this.player.element.remove();
     this.obstacles.forEach((obstacle) => obstacle.element.remove());
@@ -118,7 +112,7 @@ class Game {
     this.gameEndScreen.style.display = "block";
     this.gamemusic.pause();
   }
-  // Creat method for Winning the game
+
   endGameWon() {
     this.player.element.remove();
     this.obstacles.forEach((obstacle) => obstacle.element.remove());
